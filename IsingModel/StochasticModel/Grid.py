@@ -358,7 +358,7 @@ class TF_Grid(ABC):
 
         '''
         
-        cumRates = np.cumsum(rates) + 1e-50 # TODO: Why do we add 1e-50?
+        cumRates = np.cumsum(rates) + 1e-50 
         idx = np.searchsorted(cumRates, randomNumber, side='right') 
         # np.searchsorted uses bisection algorithm to efficiently search the list for 
         # the index of the first element that is larger or equal to a certain value.

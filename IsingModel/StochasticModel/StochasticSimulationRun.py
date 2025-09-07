@@ -95,12 +95,12 @@ if __name__ == '__main__':
     file_name    = sys.argv[1]
     file         = os.path.join(os.path.realpath('__file__'), f'../../Data/{file_name}') 
 
-    # On the super computer: file = f'/scratch/tmijatovic/Data/{file_name}'
+    
 
     parallel_simulation(file)
     
     ## To run in conda terminal use:
-    # mpiexec -n 6 python -m mpi4py 'C:/Users/tmija/Documents/GitHub/MEP/StochasticModel/StochasticSimulationRun.py' <filename>
+    # mpiexec -n 6 python -m mpi4py 'C:/../StochasticModel/StochasticSimulationRun.py' <filename>
     ## Make sure to run the code from the folder where the file is located to prevent errors with loading modules.
     '''
 

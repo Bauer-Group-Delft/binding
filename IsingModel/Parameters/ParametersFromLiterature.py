@@ -16,11 +16,6 @@ The length constants found in literature range from 0.15 - 0.25 [(Houchmandzadeh
 (Gregor, 2007b), (Abu-Arish, 2010), (Liu, 2013), (Durrieu, 2018), (Fernandes, 2022)], 
 therefore we will use the interediate value of 0.2 [(Houchmandzadeh, 2002), (Gregor, 2007b)].
 
-(Linda used lambda = 0.244.) 
-
-As a check it might be interesting to repeat the simulations with the parameter values which 
-would give the largest concentration range (largest maximum concentration and smallest length
-constant) to see how this affects our conculsions.
 
 '''
 
