@@ -279,7 +279,7 @@ for tau_idx, tau in enumerate(taus):
             # Print progress
             print(f'tau = {tau:.0f}, h = {h:.2f}, k = {k:.2E}, I(C;s) = {I_CS:.2f}, I(C;x) = {I_CX:.2f}')
 
-# Save the data TODO: change to json? 
+# Save the data
 result = np.column_stack(
     [np.array(np.meshgrid(hs,ks,taus)).T.reshape(-1, 3), 
      I_CX_test.reshape(-1), 
@@ -428,7 +428,6 @@ for run_idx in range(nruns):
         P_Sc        = np.sum(P_C_and_S,0) 
 
         # Iteratively update the distributions  
-        # TODO: add an automated stop if distribution doesn't change significantly
         for n in range(niterations): 
             # Calculate relevant probability distributions 
             P_C_and_X   = (np.dot(P_C_given_S,P_S_and_XT))
