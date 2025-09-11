@@ -5,8 +5,8 @@ This repository contains the code for stochastic Hill function model used in the
 
 ## Code Overview 
 **Main Scripts**: 
-- `DataGeneration.py`: Generates the data from the Hill model and Information bottleneck section in the paper. More information can be found in the code itself. 
-- `Figures.ipynb`: Generates the figures from our paper related to the experiment data and Hill model based on the model data generated from `DataGeneration.py`. More information can be found in the notebook itself.
+- `HillModel.py`: Generates the data from the Hill model and Information bottleneck section in the paper. More information can be found in the code itself. 
+- `Figures.ipynb`: Generates the figures from our paper related to the experiment data and Hill model based on the model data generated from `HillModel.py`. More information can be found in the notebook itself.
 
 **Dependencies**: Stated in `environment.yml` or `requirements.txt`
 
@@ -15,7 +15,7 @@ This repository contains the code for stochastic Hill function model used in the
 - `TG_normBcd.mat`: Experiment data of the Bicoid gradient, used and published with permission from Thomas Gregor from the publication [T. Gregor, D. W. Tank, E. F. Wieschaus, and W. Bialek, *Cell* 130, 153 (2007)](https://doi.org/10.1016/j.cell.2007.05.025)
 
  **Model Data**
-- After running `DataGeneration.py` for a given set of parameters, a new directory is generated containing the following data: 
+- After running `HillModel.py` for a given set of parameters, a new directory is generated containing the following data: 
 	- `parameters.json`: Contains all relevant parameters used for the model. The directory is also named after the (range) of parameters used. 
 	- `MIs_all.csv`: Contains all $I(C;s)$ and $I(C;x)$ for different $h$,$k$ combinations for each $\tau$
 		- Columns: `h`,`k`, `tau`, `I_CX`, `I_CS`
@@ -50,7 +50,7 @@ This repository contains the code for stochastic Hill function model used in the
 ├── HillModel/ 	
 │   ├── Code/
 │	     ├── Figures.ipynb
-|	     └── DataGeneration.py
+|	     └── HillModel.py
 │   ├── Data/
 │	     ├── ExperimentData/..
 |	     └── ModelData/..
@@ -68,7 +68,7 @@ This repository contains the code for stochastic Hill function model used in the
     `pip install -r requirements.txt`
 
 ## Usage
-1. (optional) Model data can be generated using `DataGeneration.py`; model parameters need to be changed in the python file before running. 
+1. (optional) Model data can be generated using `HillModel.py`; model parameters need to be changed in the python file before running. 
 2. Run `Figures.ipynb` to regenerate the paper figures. Optionally new figures can be created by changing the data directory for each type of figure. Figures are stored in `../Figures/`. 
 
 ## Contact
