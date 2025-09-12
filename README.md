@@ -49,7 +49,7 @@ For the Bicoid mean and variance, we use data kindly provided by Thomas Gregor, 
 └── README.md 
 ```
 ## License
-Distributed under the X License. See `LICENSE.md for more information.
+Distributed under the CC BY 4.0 License. See `LICENSE.md for more information.
 
 ## Contact
 For any questions or inquiries, please contact Marianne Bauer (m.s.bauer@tudelft.nl)
