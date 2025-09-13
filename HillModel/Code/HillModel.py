@@ -277,7 +277,8 @@ for tau_idx, tau in enumerate(taus):
             H_C_given_S_test[h_idx, k_idx, tau_idx] = H_C_given_S
 
             # Print progress
-            print(f'tau = {tau:.0f}, h = {h:.2f}, k = {k:.2E}, I(C;s) = {I_CS:.2f}, I(C;x) = {I_CX:.2f}')
+            # print(f'tau = {tau:.0f}, h = {h:.2f}, k = {k:.2E}, I(C;s) = {I_CS:.2f}, I(C;x) = {I_CX:.2f}')  # more verbose
+            print(f'Computing for: tau = {tau:.0f}, h = {h:.2f}, k = {k:.2E}')
 
 # Save the data
 result = np.column_stack(
