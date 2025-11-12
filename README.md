@@ -1,12 +1,28 @@
 # Code underlying: Weak transcription factor clustering at binding sites can facilitate information transfer from molecular signals
 
 This repository contains the code and data accompanying the paper:
-Mijatović, T., Kok, A. R., Zwanikken, J. W., & Bauer, M. (2025). 'Weak transcription factor clustering at binding sites can facilitate information transfer from molecular signals'. Available as arXiv preprint: [arXiv:2505.07641](https://arxiv.org/abs/2505.07641).
+Mijatović, T., Kok, A. R., Brüggen, M. J., Zwanikken, J. W., & Bauer, M. (2025). 'Weak transcription factor clustering at binding sites can facilitate information transfer from molecular signals'. Available as arXiv preprint: [arXiv:2505.07641](https://arxiv.org/abs/2505.07641).
 
 Work performed by Zwanikken Group and Bauer Group at TU Delft.
 
 ## Abstract 
-Transcription factor concentrations provide signals to cells that allow them to regulate gene expression to make correct cell fate decisions. Calculations for noise bounds in gene regulation suggest that clustering or cooperative binding of transcription factors decreases signal-to-noise ratios at binding sites. However, clustering of transcription factor molecules around binding sites is frequently observed. We develop two complementary models for clustering transcription factors at binding site sensors that allow us to study information transfer from a signal to a variable relevant to development, namely future cell fates, on the example of the signal morphogen Bicoid in early fly development. We find that weak cooperativity or clustering can allow for maximal information transfer, especially about the relevant variable. Why clustering is beneficial for transfer depends on how long the binding site sensor measures the signal before affecting downstream gene expression: for short measurements, clustering allows for the implementation of a switch, while for long measurements, weak clustering allows the sensor to access maximal developmental information provided in a nonlinear signal. Finally, we find that clustering can facilitate binding site sensors to achieve an optimal bound to molecular sensing, the information bottleneck (IB) bound. This IB optimality appears consistent with a biologically intuitive optimization.
+Transcription factor concentrations provide signals to cells that allow them to regulate gene ex-
+pression to make correct cell fate decisions. Calculations for noise bounds in gene regulation suggest
+that clustering or cooperative binding of transcription factors decreases signal-to-noise ratios at bind-
+ing sites. However, clustering of transcription factor molecules around binding sites is frequently
+observed. We develop two complementary models for clustering transcription factors at binding site
+sensors that allow us to study information transfer from a signal, the morphogen Bicoid, to a vari-
+able relevant to development, namely future cell fates. We find that weak cooperativity or clustering
+can allow for maximal information transfer, especially about the relevant variable. The timescale
+of measurement is crucial for predicting the optimal clustering strength: for short measurements,
+clustering allows for the implementation of a switch, while for long measurements, weak cluster-
+ing allows the sensor to access maximal developmental information provided in a nonlinear signal.
+Finally, we find that clustering not only facilitates information maximization about the relevant
+variable, but also can allow the binding site sensors to achieve optimality in a related optimization
+goal, the information bottleneck (IB) bound. While the measurement time restricts the region on
+the information plane that is accessible, changes in clustering in conjunction with changes in the
+binding energy can shift the binding site along the optimal bound, and towards an optimal trade-off
+between obtaining information about the signal and obtaining relevant information.
 
 ## Overview
 In the paper we discuss two different models for clustering transcription factors at a single binding site sensor: 
