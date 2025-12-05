@@ -42,6 +42,13 @@ def get_expression_steady_state(run_prms, grid_prms, N=None):
 
     return expression@v
 
+def get_expression_mean_and_instantaneous_var_steady_state(run_prms, grid_prms, N=None):
+    M, v = create_and_solve_steady_state(run_prms, grid_prms)
+    expression = get_expression_per_state(M, N)
+
+    mean_expression = expression@v
+    return mean_expression, (expression-mean_expression)**2@v
+
 def get_expression_mean_and_var_steady_state(run_prms, grid_prms, T, N=None, limit=False, return_all=False, diagonalize=False):
     M, v = create_and_solve_steady_state(run_prms, grid_prms)
     mat = M.create_matrix(sparse=False)

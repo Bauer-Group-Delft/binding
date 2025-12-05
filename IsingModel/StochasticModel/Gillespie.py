@@ -14,7 +14,7 @@ The run method is used to run the simulation until a set end time or maximum
 number of timesteps is reached. Every iteration the simulation obtains the 
 relevant rates from the grid, calculates the timestep using the update_time 
 method, chooses and perfomes a reaction using the perform_reaction method and, 
-if a datafile is available, stores the new data.
+if a datafile is vailable, stores the new data.
 
 The simulation can be reset using the reinitialize method.
 '''

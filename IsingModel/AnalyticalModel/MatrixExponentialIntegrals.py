@@ -24,7 +24,6 @@ def matrix_exponential_integral(mat, T, mode=1):
         eigenvalues, eigenvectors = np.linalg.eig(mat)
         
         order = np.argsort(np.abs(eigenvalues))
-        # print('eigenvalues:', eigenvalues[order])
         D = np.diag(eigenvalues[order])
         P = eigenvectors[:,order]
         
@@ -89,13 +88,12 @@ def covariance_matrix_exponential_integral_using_diagonalization(mat, T, limit=F
     if limit:
         D_int[1:,1:] = np.diag(-1/eigs[1:])
     else:
-        # D_int[1:,1:] = np.diag((-1/((eigs[1:]**2)*T))*(1-np.exp(eigs[1:]*T)+eigs[1:]*T))
         D_int[1:,1:] = np.diag((-1/eigs[1:])*(1+(1-np.exp(eigs[1:]*T))/(eigs[1:]*T)))
         # So in the limit of large T this indeed becomes np.diag(-1/eigs[1:])
         
     integral = P@D_int@np.linalg.inv(P)
     return np.real(integral)
-    # TODO: Note that integral has negtive entries, while it is expected to be fully positive
+    
 
 def covariance_matrix_exponential_integral(mat, P_steady, T, limit=False):
     '''
@@ -155,21 +153,6 @@ if __name__ == "__main__":
     from FullMatrix import FullRatesAndEnergies, FullStates, FullMatrix
 
     T = 1050000000.0000001
-
-    # Complex eigenvalues, which should be real
-    # J   = 0
-    # eb  = 14.3
-    # htf = -16.7
-    # L   = 6
-    # sites = np.arange(L)
-    # periodic = False
-    
-    # Variance should be 0.0012952179867063598
-    # Casting integral to real or abs gives a much smaller value (e-05).
-    # A variance close to this expected value is obtained when casting eigs and P 
-    # to real values in covariance_matrix_exponential_integral. (For other parameter 
-    # values this may lead to problems with inverting P though.) While this solves 
-    # the first case of negative variance below, it does not solve the second.
     
     # Variance higher than 1
     J   = 14.0 
@@ -179,21 +162,7 @@ if __name__ == "__main__":
     sites = np.arange(L)
     periodic = True
 
-    # Negative old variance
-    # J=14.0
-    # eb=2.343475341796875
-    # htf=-12.332323232323233
-    # L = 10
-    # sites = np.arange(6)+2
-    # periodic = False
     
-    # Negative old variance
-    # J=14.0
-    # eb=2.343475341796875
-    # htf=-12.192929292929293
-    # L = 10
-    # sites = np.arange(6)+2
-    # periodic = False
     
     R = FullRatesAndEnergies(htf, eb, J, beta=1)
     S = FullStates(L)

@@ -417,7 +417,7 @@ class TF_Grid(ABC):
         This method should be overwritten in each subclass.
         
         TODO: These update functions can likely be made general for all subclasses by indexing
-        using bollean arrays, though that might take up too much memory and not be
+        using boolean arrays, though that might take up too much memory and not be
         beneficial.
 
         Parameters

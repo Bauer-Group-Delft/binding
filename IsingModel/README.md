@@ -78,5 +78,7 @@ Most of the data required for generating the figures is already present in the D
 - sympy
 - sys
 
+See "requirements.txt" for the packages required for running the FigureCreationScripts.ipynb file in the Scripts folder. Note that extra packages from the list above may need to be installed for running the rest of the code.
+
 ## Contact
 For any questions or inquiries, please contact Marianne Bauer (m.s.bauer@tudelft.nl)

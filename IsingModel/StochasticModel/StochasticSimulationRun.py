@@ -95,8 +95,6 @@ if __name__ == '__main__':
     file_name    = sys.argv[1]
     file         = os.path.join(os.path.realpath('__file__'), f'../../Data/{file_name}') 
 
-    
-
     parallel_simulation(file)
     
     ## To run in conda terminal use:

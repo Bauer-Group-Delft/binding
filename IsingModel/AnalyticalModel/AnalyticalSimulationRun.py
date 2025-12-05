@@ -9,7 +9,7 @@ sys.path.append('../Parameters/')
 from Parameters import RunParameters
 
 from SolveMatrixEquation import create_and_solve_steady_state
-from GetExpression import get_expression_steady_state, get_expression_mean_and_var_steady_state
+from GetExpression import get_expression_steady_state, get_expression_mean_and_instantaneous_var_steady_state, get_expression_mean_and_var_steady_state
 
 #%% Steady state from analytcial model
 
@@ -48,6 +48,25 @@ def get_means(htf_list, J_list, eb_list, grid_prms, T, N=None, file=None):
             
     return means
 
+#%% Instantaneous standard deviation from analytical model
+
+def get_means_and_instantaneous_vars(htf_list, J_list, eb_list, grid_prms, T, N=None, file=None):
+    means_and_vars = {}
+    for J, eb in zip(J_list, eb_list):
+        for htf in htf_list:
+            print(f'J={J}, eb={eb}, htf={htf}')
+            run_prms = RunParameters(htf, eb, J, None, grid_prms)
+            
+            mean, var = get_expression_mean_and_instantaneous_var_steady_state(run_prms, grid_prms, N=N)
+            means_and_vars[f'J{J}eb{eb}htf{htf}'] = (mean, var)
+            
+    if not file==None:
+        f = open(file+'_means_and_instantaneous_vars', 'wb')
+        pickle.dump(means_and_vars, f)
+        f.close()
+            
+    return means_and_vars
+
 #%% Mean and standard deviation from analytical model
 
 def get_means_and_vars(htf_list, J_list, eb_list, grid_prms, T, N=None, limit=False, file=None):
@@ -69,7 +88,6 @@ def get_means_and_vars(htf_list, J_list, eb_list, grid_prms, T, N=None, limit=Fa
         f.close()
             
     return means_and_vars
-
 
 #%% Correlation time from analytical model
 
@@ -95,10 +113,12 @@ if __name__ == '__main__':
     
     from Metadata import read_metadata
     
+    if len(sys.argv)<2:
+        print("Please supply a metadatafile as commandline argument")
+        sys.exit()
+
     file_name    = sys.argv[1]
     file         = os.path.join(os.path.realpath('__file__'), f'../../Data/{file_name}') 
-
-    # On the super computer: file = f'/scratch/tmijatovic/Data/{file_name}'
 
     grid_prms, sim_prms, varied_prms = read_metadata(file)
     
