@@ -1,7 +1,7 @@
 # Ising Model
 This repository contains the code for stochastic Ising-like model used in the paper:
 
- Mijatović, T., Kok, A. R., Zwanikken, J. W., & Bauer, M. (2025). 'Weak transcription factor clustering at binding sites can facilitate information transfer from molecular signals'. Available as arXiv preprint: [arXiv:2505.07641](https://arxiv.org/abs/2505.07641).
+Mijatović, T., Kok, A. R., Brüggen, M. J., Zwanikken, J. W., & Bauer, M. (2025). 'Weak transcription factor clustering at binding sites can facilitate information transfer from molecular signals'. Available as arXiv preprint: [arXiv:2505.07641](https://arxiv.org/abs/2505.07641).
 
 ## Repository Structure:
 ```
