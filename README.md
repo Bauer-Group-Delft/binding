@@ -1,7 +1,7 @@
 # Code underlying: Weak transcription factor clustering at binding sites can facilitate information transfer from molecular signals
 
 This repository contains the code and data accompanying the paper:
-Mijatović, T., Kok, A. R., Brüggen, M. J., Zwanikken, J. W., & Bauer, M. (2025). 'Weak transcription factor clustering at binding sites can facilitate information transfer from molecular signals'. Available as arXiv preprint: [arXiv:2505.07641](https://arxiv.org/abs/2505.07641).
+Mijatović, T., Kok, A. R., Brüggen, M. J., Zwanikken, J. W., & Bauer, M. (2025). 'Weak transcription factor clustering at binding sites can facilitate information transfer from molecular signals'. Published in Physical Review X: Life: [doi: https://doi.org/10.1103/cx3r-f](https://doi.org/10.1103/cx3r-f2g2).
 
 Work performed by Zwanikken Group and Bauer Group at TU Delft.
 
